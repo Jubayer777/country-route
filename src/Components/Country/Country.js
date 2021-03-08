@@ -11,7 +11,7 @@ const Country = (props) => {
                         <Card.Body>
                             <Card.Title>{name}</Card.Title>
                             
-                            <Link to={`/name/${name}`}>Details</Link>
+                            <Link to={`/country/${name}`}>Details</Link>
                             {/* <Button variant="primary">Go somewhere</Button> */}
                         </Card.Body>
                 </Card>
