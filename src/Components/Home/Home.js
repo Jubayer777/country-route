@@ -9,11 +9,13 @@ const Home = () => {
           .then(data=>setCountries(data))
     }, [])
     return (
-        <div>
-            <h1>Country Count: {countries.length}</h1>
-            {
-                countries.map(country=><Country country={country}></Country>)
-            }
+        <div className="d-flex flex-column justify-content-center" style={{backgroundColor:'#FAF0E6'}}>
+            <h1 className="d-flex justify-content-center mt-5">Total Country: {countries.length}</h1>
+            <div className="row d-flex justify-content-center mt-5">
+                {
+                    countries.map(country=><Country country={country}></Country>)
+                }
+            </div>
         </div>
     );
 };

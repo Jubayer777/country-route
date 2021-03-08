@@ -12,18 +12,23 @@ const CountryDetail = () => {
     }, [])
     const {name,flag,capital,region,population}=country;
     return (
+        <div className="d-flex flex-column justify-content-center" style={{backgroundColor:'#BC8F8F'}}>
+                <h1 className="d-flex justify-content-center mt-5">Details About {name}</h1>
+                 <div className="d-flex justify-content-center" >
+                        <Card  style={{ width: '30rem',borderRadius:'5px', backgroundColor:'#2F4F4F',color:'white',marginTop:'60px',marginBottom:'60px',border:'none',boxShadow: '2px 5px 4px #8FBC8F' }}>
+                            <Card.Img variant="top" style={{borderTopLeftRadius:'5px',borderTopRightRadius:'5px'}} src={flag} />
+                            <Card.Body>
+                                <Card.Title>{name}</Card.Title>
+                                <Card.Text>
+                                    <p>Capital: {capital}</p>
+                                    <p>Region: {region}</p>
+                                    <p><small>Population: {population}</small></p>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                 </div>
+        </div>
         
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={flag} />
-            <Card.Body>
-                <Card.Title>{name}</Card.Title>
-                <Card.Text>
-                    <p>Capital: {capital}</p>
-                    <p>Region: {region}</p>
-                    <p><small>Population: {population}</small></p>
-                </Card.Text>
-            </Card.Body>
-        </Card>
     );
 };
 

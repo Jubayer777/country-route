@@ -2,8 +2,9 @@ import React from 'react';
 
 const NoMatch = () => {
     return (
-        <div>
-            <h3>No component is found</h3>
+        <div style={{textAlign:'center',marginTop:'60px'}}>
+            <h3>No country is found</h3>
+            <p>404 error!!!</p>
         </div>
     );
 };

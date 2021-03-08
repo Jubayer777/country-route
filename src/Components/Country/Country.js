@@ -1,18 +1,21 @@
 import React from 'react';
 import {Card, Button} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import './Country.css';
+import { Link, useHistory } from 'react-router-dom';
+
 const Country = (props) => {
-    const {name,flag,capital,region,population}=props.country;
+    const {name,flag}=props.country;
+    const history=useHistory();
+    const handleClick=(countryName)=>{
+        history.push(`/country/${countryName}`)
+    }
     return (
-            <div>
-                <Card className="country-container" style={{width:'18rem'}}>
-                        <Card.Img variant="top" className="card-img" src={flag} />
+            <div className="country-container d-flex justify-content-center col ">
+                <Card  style={{width:'18rem',borderRadius:'5px', backgroundColor:'aqua',margin:'10px',border:'none',boxShadow: '2px 5px 4px #888888'}}>
+                        <Card.Img variant="top" style={{borderTopLeftRadius:'5px',borderTopRightRadius:'5px'}} src={flag} />
                         <Card.Body>
                             <Card.Title>{name}</Card.Title>
-                            
-                            <Link to={`/country/${name}`}>Details</Link>
-                            {/* <Button variant="primary">Go somewhere</Button> */}
+                            {/* <Link to={`/country/${name}`}>Details</Link> */}
+                            <Button onClick={()=>handleClick(name)} variant="danger">Details</Button>
                         </Card.Body>
                 </Card>
            </div>
