@@ -1,6 +1,6 @@
 import React from 'react';
 import {Card, Button} from 'react-bootstrap';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const Country = (props) => {
     const {name,flag}=props.country;

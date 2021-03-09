@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 import Home from './Components/Home/Home';
@@ -6,8 +6,8 @@ import Header from './Components/Header/Header';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
+  
 } from "react-router-dom";
 import NoMatch from './Components/NoMatch/NoMatch';
 import CountryDetail from './Components/CountryDetail/CountryDetail';

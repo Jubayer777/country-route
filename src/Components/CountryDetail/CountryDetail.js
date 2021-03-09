@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import {Card, Button} from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
 
 const CountryDetail = () => {
     const {countryName}=useParams();
@@ -9,7 +9,7 @@ const CountryDetail = () => {
           fetch(`https://restcountries.eu/rest/v2/name/${countryName}`)
           .then(res=>res.json())
           .then(data=>setCountry(data[0]))
-    }, [])
+    }, [countryName])
     const {name,flag,capital,region,population}=country;
     return (
         <div className="d-flex flex-column justify-content-center" style={{backgroundColor:'#BC8F8F'}}>

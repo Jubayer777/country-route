@@ -13,7 +13,7 @@ const Home = () => {
             <h1 className="d-flex justify-content-center mt-5">Total Country: {countries.length}</h1>
             <div className="row d-flex justify-content-center mt-5">
                 {
-                    countries.map(country=><Country country={country}></Country>)
+                    countries.map(country=><Country key={country.name} country={country}></Country>)
                 }
             </div>
         </div>
